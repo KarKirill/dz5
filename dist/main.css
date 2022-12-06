@@ -1,0 +1,258 @@
+:root {
+  --dark-background:#1C1B1F;
+  --dark-primary-container:#4A4458;
+  --dark-surface:#9ca3ab;
+  --dark-surface-var:#f2f3f4;
+  --dark-hover:#323135;
+  --light-background:#FFFBFE;
+  --light-primary-container:#E8DEF8;
+  --light-surface:#6D7277;
+  --light-surface-var:#484849;
+  --light-hover:#E5E1E4;
+}
+@media (prefers-color-scheme: light) {
+  :root {
+    --background:var(--light-background);
+    --primary-container:var(--light-primary-container);
+    --p-color:var(--light-surface);
+    --h-color:var(--light-surface-var);
+    --hover:var(--light-hover);
+  }
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: var(--dark-background);
+    --primary-container: var(--dark-primary-container);
+    --p-color:var(--dark-surface);
+    --h-color:var(--dark-surface-var);
+    --hover:var(--dark-hover);
+  }
+}
+
+body {
+  margin: 0;
+  height: 100;
+}
+@media (max-width: 599px) {
+  body {
+    background-color: var(--background);
+    margin-inline: 8px;
+  }
+}
+@media (min-width: 600px) {
+  body {
+    background-color: var(--background);
+    margin-inline: 12px;
+  }
+}
+@media (min-width: 1000px) {
+  body {
+    background-color: var(--background);
+    margin-inline: 32px;
+  }
+}
+
+.header_top {
+  display: flex;
+  align-items: center;
+}
+@media (max-width: 599px) {
+  .header_top {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    background: var(--background);
+    height: 50px;
+    border-bottom: 1px solid var(--primary-container);
+  }
+}
+@media (min-width: 600px) {
+  .header_top {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    background: var(--background);
+    height: 70px;
+    border-bottom: 2px solid var(--primary-container);
+  }
+}
+@media (min-width: 1000px) {
+  .header_top {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    background: var(--background);
+    height: 90px;
+    border-bottom: 3px solid var(--primary-container);
+  }
+}
+
+@media (max-width: 599px) {
+  .header_bottom {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    background: var(--primary-container);
+    height: 50px;
+  }
+}
+
+@media (max-width: 599px) {
+  .market {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    padding-block: 60px;
+    gap: 8px;
+    margin-inline: 8px;
+  }
+}
+@media (min-width: 600px) {
+  .market {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    padding-block: 90px;
+    margin-inline: 12px;
+    gap: 20px;
+  }
+}
+@media (min-width: 1000px) {
+  .market {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    padding-top: 90px;
+    margin-inline: 32px;
+    gap: 20px;
+  }
+}
+
+.trader_one {
+  padding: 5px;
+  display: absolute;
+  border-radius: 10px;
+}
+@media (max-width: 599px) {
+  .trader_one {
+    height: 325px;
+    width: 200px;
+  }
+}
+@media (min-width: 600px) {
+  .trader_one {
+    height: 400px;
+    width: 250px;
+  }
+}
+@media (min-width: 1000px) {
+  .trader_one {
+    height: 420px;
+    width: 300px;
+  }
+}
+.trader_one:hover {
+  background: var(--hover);
+}
+
+.description {
+  display: absolute;
+  position: flex;
+  margin-top: 10px;
+  height: auto;
+  width: auto;
+  overflow: hidden;
+  padding: 5px 5px 5px 0px;
+}
+
+p {
+  color: var(--p-color);
+  overflow: hidden;
+}
+
+p1 {
+  font-size: 16px;
+  color: var(--h-color);
+}
+
+h1 {
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--h-color);
+}
+
+@media (max-width: 599px) {
+  .nav1, .nav2 {
+    margin-inline: 21px;
+  }
+}
+@media (min-width: 600px) {
+  .nav1, .nav2 {
+    margin-inline: 29px;
+  }
+}
+@media (min-width: 1000px) {
+  .nav1, .nav2 {
+    margin-inline: 69px;
+  }
+}
+
+.nav1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--primary-container);
+}
+@media (max-width: 599px) {
+  .nav1 {
+    padding: 2px;
+    border-radius: 10px;
+  }
+}
+@media (min-width: 600px) {
+  .nav1 {
+    padding: 5px;
+    border-radius: 5px;
+  }
+}
+@media (min-width: 1000px) {
+  .nav1 {
+    padding: 10px;
+    border-radius: 10px;
+  }
+}
+
+.image {
+  background: url("https://img.freepik.com/free-vector/shopping-basket-icon_1063-6.jpg?w=740&t=st=1669754231~exp=1669754831~hmac=1eef499fb1afdcea14fab1ea77ec86e67b2fb97e9fee011bde8a50353bc7403a");
+  background-size: cover;
+}
+
+.image {
+  border-radius: 10px;
+}
+@media (max-width: 599px) {
+  .image {
+    height: 200px;
+    width: 200px;
+  }
+}
+@media (min-width: 600px) {
+  .image {
+    height: 250px;
+    width: 250px;
+  }
+}
+@media (min-width: 1000px) {
+  .image {
+    height: 300px;
+    width: 300px;
+  }
+}
